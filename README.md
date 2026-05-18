@@ -40,7 +40,11 @@ ai-agent-system/
 │
 ├── frontend/
 │   ├── src/
+│   ├── public/
 │   ├── package.json
+│   ├── package-lock.json
+│   ├── vite.config.js
+│   ├── index.html
 │
 ├── backend/
 │   ├── main.py
@@ -50,55 +54,114 @@ ai-agent-system/
 │   ├── utils.py
 │   ├── requirements.txt
 │
-└── README.md
+├── README.md
+└── .gitignore
+```
+
 ---
-Backend Setup
-Step 1 → Go to backend folder
+
+# Backend Setup
+
+## Step 1 → Go to backend folder
+
+```bash
 cd backend
-Step 2 → Create virtual environment
+```
+
+## Step 2 → Create virtual environment
+
+```bash
 python -m venv venv
-Step 3 → Activate virtual environment
-Windows
+```
+
+## Step 3 → Activate virtual environment
+
+### Windows
+
+```bash
 venv\Scripts\activate
-Step 4 → Install dependencies
+```
+
+## Step 4 → Install dependencies
+
+```bash
 pip install -r requirements.txt
-Step 5 → Run backend server
+```
+
+## Step 5 → Run backend server
+
+```bash
 uvicorn main:app --reload
+```
 
 Backend runs on:
 
+```text
 http://localhost:8000
-Frontend Setup
-Step 1 → Go to frontend folder
+```
+
+---
+
+# Frontend Setup
+
+## Step 1 → Go to frontend folder
+
+```bash
 cd frontend
-Step 2 → Install dependencies
+```
+
+## Step 2 → Install dependencies
+
+```bash
 npm install
-Step 3 → Install axios
+```
+
+## Step 3 → Install axios
+
+```bash
 npm install axios
-Step 4 → Run frontend
+```
+
+## Step 4 → Run frontend
+
+```bash
 npm run dev
+```
 
 Frontend runs on:
 
+```text
 http://localhost:5173
-Example Workflow
+```
+
+---
+
+# Example Workflow
 
 User enters a task:
 
+```text
 Create a short blog about AI in hiring
+```
 
 Frontend Agent sends request to Backend Agent.
 
 Backend Agent asks:
-
-tone
-length
+- tone
+- length
 
 After collecting details, Backend Agent generates the final output.
 
-Example Interaction
+---
+
+# Example Interaction
+
+```text
 User:
 Create a short blog about AI in hiring
+
+Frontend Agent:
+Sending request to Backend Agent...
 
 Backend Agent:
 What tone would you like? (formal/casual)
@@ -114,3 +177,8 @@ short
 
 Backend Agent:
 Generates final content
+```
+
+---
+
+
